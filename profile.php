@@ -15,10 +15,10 @@
 
 
 	/*
-     TO-DO: Write a query that retrieves ALL user and zodiac info from the database based on 
-     		the username from the session data.
+     		TO-DO: Write a query that retrieves ALL user and zodiac info from the database based on 
+     			the username from the session data.
 	 		Execute the SQL query using the pdo function and fetch the result
-   */
+   	*/
 
 
 
@@ -60,63 +60,65 @@
 	</head>
 	<body>
 
-			<header>
-				<div class="header-left">
-					<div class="logo">
-						<img src="imgs/logo.png" alt="URI Cosmic Horoscopes Logo">
-	      			</div>
+		<header>
+			<div class="header-left">
+				<div class="logo">
+					<img src="imgs/logo.png" alt="URI Cosmic Horoscopes Logo">
+				</div>
+	
+				<nav>
+					<ul>
+						<li><a href="index.php">Horoscopes</a></li>
+					</ul>
+			    	</nav>
+			</div>
+	
+		    <div class="header-right">
+			<ul>
+				<li><?= $logged_in ? '<a href="logout.php">Log Out</a>' : '<a href="login.php">Log In</a>'; ?></li>
+			</ul>
+		    </div>
+			
+		</header>
 
-		      		<nav>
-		      			<ul>
-		      				<li><a href="index.php">Horoscopes</a></li>
-				        </ul>
-				    </nav>
-			   	</div>
 
-			    <div class="header-right">
-			    	<ul>
-			    		<li><?= $logged_in ? '<a href="logout.php">Log Out</a>' : '<a href="login.php">Log In</a>'; ?></li>
-			    	</ul>
-			    </div>
-			</header>
+		<!-- 
+			TO DO: Fill in ALL the placeholders for this zodiac sign and horoscope from the database
+		-->
 
+		<div id="content" class="animate-bottom">
+			<h1><?= '' ?>'s Personal Horoscope</h1>
+			<hr />
+			<br />
 
-			<!-- 
-				TO DO: Fill in ALL the placeholders for this zodiac sign and horoscope from the database
-			-->
+			<div id="horoscope-content">
 
-			<div id="content" class="animate-bottom">
-				<h1><?= '' ?>'s Personal Horoscope</h1>
-				<hr />
-				<br />
+				<div class="horoscope-info">
+					<div class="horoscope-header">
+				    		<img src="<?= '' ?>" alt="<?= '' ?>">
+				    		<h2><?= '' ?></h2>
+				    		<p><?= '' ?></p>
+			    		</div>
+	
+					<div class="horoscope-ratings">
+				    		<h3>Today's Ratings:</h3>
+				    		<ul>
+							<li>Mood: <?= '' ?></li>
+							<li>Success: <?= '' ?></li>
+							<li>Love: <?= '' ?></li>
+				    		</ul>
+					</div>
+		    		</div>
 
-				<div id="horoscope-content">
+		    		<hr />
 
-			    <div class="horoscope-info">
-			        <div class="horoscope-header">
-			            <img src="<?= '' ?>" alt="<?= '' ?>">
-			            <h2><?= '' ?></h2>
-			            <p><?= '' ?>
-
-			        <div class="horoscope-ratings">
-			            <h3>Today's Ratings:</h3>
-			            <ul>
-			                <li>Mood: <?= '' ?></li>
-			                <li>Success: <?= '' ?></li>
-			                <li>Love: <?= '' ?></li>
-			            </ul>
-			        </div>
-			    </div>
-
-			    <hr />
-
-			    <div class="horoscope-description">
-			        <h3>Today's Horoscope:</h3>
-			        <p><?= '' ?></p>
-			    </div>
+		    		<div class="horoscope-description">
+					<h3>Today's Horoscope:</h3>
+					<p><?= '' ?></p>
+		    		</div>
 			</div>			
 
-			</div>
+		</div>
 
-		</body>
-	</html>
+	</body>
+</html>
